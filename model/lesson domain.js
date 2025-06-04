@@ -22,7 +22,7 @@ const lessonsSchema = new mongoose.Schema({
     },
     domain_id: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Chapters',
+        ref: 'domain',
         required: [true, 'Chapter ID is required']
     },
     user_id: {
