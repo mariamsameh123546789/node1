@@ -22,10 +22,9 @@ const domainSchema = new mongoose.Schema({
     required: [true, 'Icon is required'],
     trim: true
   },
-  user_id: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-    required: [true, 'User ID is required']
+   is_completed: {
+    type: Boolean,
+    default: false
   }
 });
 

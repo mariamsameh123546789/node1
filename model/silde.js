@@ -35,11 +35,7 @@ const slideSchema = new mongoose.Schema({
     ref: 'Domain',
     required: [true, 'Domain ID is required']
   },
-  user_id: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-    required: [true, 'User ID is required']
-  }
+
 });
 
 module.exports = mongoose.model('Slide', slideSchema);
