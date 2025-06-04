@@ -15,12 +15,7 @@ const chaptersSchema = new mongoose.Schema({
     type: Number,
     required: [true, 'Count is required'],
     min: 0
-  },
-  user_id: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-    required: [true, 'User ID is required']
-  },
+  }
   is_completed: {
     type: Boolean,
     default: false
