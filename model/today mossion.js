@@ -15,7 +15,7 @@ const missionSchema = new mongoose.Schema({
     type: Boolean,
     default: false
   },
-  is_mossion_added: {
+  is_manually_added: {
     type: Boolean,
     default: false
   },
