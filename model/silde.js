@@ -1,12 +1,7 @@
 const mongoose = require('mongoose');
 
-<<<<<<< HEAD:model/silde.js
 const slideSchema = new mongoose.Schema({
   slide_id: {
-=======
-const LessonsChapterSchema = new mongoose.Schema({
-  lesson_id: {
->>>>>>> c24024a8131c5d08f2103851332289ecf806e4a1:model/lesson chapter.js
     type: mongoose.Schema.Types.ObjectId,
     default: mongoose.Types.ObjectId,
     unique: true
@@ -47,8 +42,4 @@ const LessonsChapterSchema = new mongoose.Schema({
   }
 });
 
-<<<<<<< HEAD:model/silde.js
 module.exports = mongoose.model('Slide', slideSchema);
-=======
-module.exports = mongoose.model('Lessons', LessonsChapterSchema);
->>>>>>> c24024a8131c5d08f2103851332289ecf806e4a1:model/lesson chapter.js
