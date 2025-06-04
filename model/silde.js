@@ -1,14 +1,19 @@
 const mongoose = require('mongoose');
 
-const lessonsSchema = new mongoose.Schema({
-  lesson_id: {
+const slideSchema = new mongoose.Schema({
+  slide_id: {
     type: mongoose.Schema.Types.ObjectId,
     default: mongoose.Types.ObjectId,
     unique: true
   },
   text: {
     type: String,
-    required: [true, 'Lesson text is required'],
+    required: [true, 'Slide text is required'],
+    trim: true
+  },
+  content: {
+    type: String,
+    required: [true, 'Slide content is required'],
     trim: true
   },
   is_completed: {
@@ -25,12 +30,16 @@ const lessonsSchema = new mongoose.Schema({
     ref: 'Chapters',
     required: [true, 'Chapter ID is required']
   },
+  domain_id: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Domain',
+    required: [true, 'Domain ID is required']
+  },
   user_id: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: [true, 'User ID is required']
-  },
-  
+  }
 });
 
-module.exports = mongoose.model('Lessons', lessonsSchema);
+module.exports = mongoose.model('Slide', slideSchema);
