@@ -22,7 +22,10 @@ const domainSchema = new mongoose.Schema({
     required: [true, 'Icon is required'],
     trim: true
   },
-
+   is_completed: {
+    type: Boolean,
+    default: false
+  }
 });
 
 module.exports = mongoose.model('Domain', domainSchema);
