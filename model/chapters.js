@@ -15,9 +15,13 @@ const chaptersSchema = new mongoose.Schema({
     type: Number,
     required: [true, 'Count is required'],
     min: 0
+<<<<<<< HEAD
     
   },
 
+=======
+  },
+>>>>>>> dc8eead12dd840d13a8f6764f1d55d5be6000880
   is_completed: {
     type: Boolean,
     default: false
